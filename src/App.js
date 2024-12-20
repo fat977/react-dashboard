@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter , Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -30,7 +30,7 @@ const Breadcrumbs = React.lazy(()=> import("./components/Breadcrumbs"));
 function App() {
   return (
     <div className="App">
-      <BrowserRouter
+      <HashRouter
         future={{
           v7_relativeSplatPath: true,
           v7_startTransition: true,
@@ -75,7 +75,7 @@ function App() {
             <Route path="dashboard/pages/register-login" element={<Login />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
