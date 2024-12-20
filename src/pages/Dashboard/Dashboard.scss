@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+.dashboard{
+    min-height: 100vh;
+
+    .palette{
+      z-index:3;
+      position:fixed;
+      right:25px; 
+      bottom:100px;
+      animation: icon-spin infinite 10s linear;
+  }
+  .palette-colors{
+      gap: 10px;
+      position:fixed;
+      right:60px;
+      bottom:50px;
+      width:200px 
+  }
+  
+  @keyframes icon-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .outlet{
+      background-color: $light-gray;
+    }
+}
+.react-calendar{
+    background: $light-gray !important;
+    margin: 0 auto;
+}
+
+
+  

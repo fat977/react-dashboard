@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: $backgroundColor !important;
+}
+ */
+::-webkit-scrollbar {
+  width: 6px; /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar (if applicable) */
+}
+
+/* Style the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  border-radius: 10px; /* Round corners */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #acabab; /* Darker color */
+  border-radius: 10px; /* Round corners */
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #acabab; /* Change color when hovered */
+}
+
+.breadcrumb-item{
+  font-family: $primaryFont;
+  font-size: 14px;
+}
+
+.card-header{
+  font-family: $primaryFont;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-body,td{
+  font-family: $secondaryFont !important;
+  font-size: $fontSize;
+}
+
+h3,h1,h4,th{
+  font-family: $primaryFont !important;
+  font-weight: bold !important;
+  color: $primary-color !important;
+}
+h5{
+  font-family: $primaryFont !important;
+}
+button{
+  font-family: $primaryFont !important;
+font-size: $fontSize;
+}
+
+p,.form-check-label,.form-label,input::placeholder{
+  font-family: $secondaryFont !important;
+  font-size: 14px !important;
+}
+

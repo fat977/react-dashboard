@@ -1,0 +1,113 @@
+@import '../../styles/variables';
+
+.form-card {
+  width: 100%;
+  height: 30rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+
+  .welcome-div {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/form/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg');
+    background-size: cover;
+    background-position: 100% 70%;
+    background-repeat: no-repeat;
+
+  }
+
+  .form-div {
+
+    .login,
+    .register {
+      .input-group {
+        height: 50px;
+        border: 1px solid $light-gray !important;
+
+        &:focus-within {
+          border: 1px solid $primary-color !important;
+        }
+
+        .form-control {
+          box-shadow: none !important;
+          border: none !important;
+
+          &:focus {
+            box-shadow: none !important;
+          }
+        }
+
+        .input-group-text {
+          border: none !important;
+          background-color: $white-color !important;
+
+        }
+      }
+
+      .form-check .form-check-input {
+        &:focus {
+          box-shadow: none !important;
+
+        }
+
+        &:checked {
+          background-color: $primary-color !important;
+          border-color: $primary-color !important;
+        }
+      }
+    }
+  }
+}
+
+.register-btn,
+.login-btn,
+.welcome-btn {
+  border-radius: 50px !important;
+  background: linear-gradient(90.21deg, $primary-color -5.91%, $secondary-color 111.58%);
+  color: $white-color;
+  border: none !important;
+  padding: 10px 20px;
+}
+
+
+@media (max-width: 992px) {
+  .form-div {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
+      url('../../assets/form/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg');
+    width: 100% !important;
+  }
+
+
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    /* Start off-screen */
+  }
+
+  to {
+    transform: translateX(0);
+    /* End at normal position */
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    /* Start off-screen */
+  }
+
+  to {
+    transform: translateX(0);
+    /* End at normal position */
+  }
+}
+
+
+.sliding-div.show-login {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+.sliding-div.show-register {
+  animation: slideInFromRight 0.5s ease-in-out;
+}

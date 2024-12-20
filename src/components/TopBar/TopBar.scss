@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+%body-style{
+    border: $border;
+    border-radius: 5px;
+    right: 0px;
+    flex-direction: column;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    border-left: none !important;
+    
+    z-index: 4;
+    width : 81vw;
+    .right-items {
+        .notifications {
+            .notifications-btn{
+                position: relative;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                background-color: transparent;
+            }
+            .notifications-body {
+                @extend %body-style;
+                width: 300px;
+                a {
+                    @include links;
+                    color: $black-color;
+                }
+                hr {
+                    margin: 5px 0 !important;
+                }
+                font-family: $secondaryFont;
+                font-size: $fontSize;
+            }
+        }
+        .settings {
+            .profile-img {
+                position: relative;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .settings-body {
+                @extend %body-style;
+                width: 100px;
+                font-family: $secondaryFont;
+                font-size: $fontSize;
+                .w-100 {
+                    a {
+                        @include links;
+                    }
+
+                    &:hover {
+                        background-color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .left-items{
+        .search{
+            border: 1px solid $light-gray !important;
+            .input-group-text{
+                border: none !important;
+                background-color: $white-color !important;
+            }
+            .form-control{
+                border: none !important;
+            }
+        }
+    }
+}
+
+.search-result nav{
+    .nav-item{
+        &:hover{
+            background-color: $white-color ;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            color: $black-color;
+            text-decoration: none !important;
+           &:hover{
+            color: $primary-color !important;
+           }
+        }
+    }
+
+   
+}

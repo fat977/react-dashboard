@@ -1,0 +1,28 @@
+.input-group {
+    height: 50px;
+}
+
+    .form-control {
+      box-shadow: none !important;
+      border: 1px solid rgb(209, 206, 206) !important;
+
+      &:focus {
+        box-shadow: none !important;
+        border: 1px solid rgb(111, 4, 105) !important;
+      }
+    }
+
+   
+  
+
+  .form-check .form-check-input {
+    &:focus {
+      box-shadow: none !important;
+
+    }
+
+    &:checked {
+      background-color: rgb(111, 4, 105) !important;
+      border-color: rgb(111, 4, 105) !important;
+    }
+  }

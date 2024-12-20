@@ -1,0 +1,77 @@
+
+@import '../variables';
+
+.dark-mode {
+
+  .side-bar,
+  .top-bar,
+  .footer,
+  .form-control,
+  .button-div,
+  .card-body,
+  .widget,
+  .calender,
+  .todo,
+  .notifications-body {
+    background-color: $black-color !important;
+    color: $white-color !important;
+  }
+
+
+
+  .form-control,.form-select {
+    border: 1px solid $dark-gray !important;
+    background-color: rgb(51, 51, 51) !important;
+  }
+
+  .breadcrumb-item,
+  .form-text,
+  label,
+  input::placeholder,
+  .form-check,
+   a,option
+  {
+    color: $dark-gray !important;
+  }
+
+  input:focus::placeholder {
+    color: $light-gray !important;
+    /* Change this to your desired color */
+  }
+
+
+  .outlet,
+  .accordion-body,
+  .accordion-button,
+  .carousel,
+  .ck,
+  .swiper,
+  .search-result,.settings-body,.modal-content,
+  div[class^="sc"],
+  nav[class^="sc"],
+  .palette-colors {
+    background-color: $jet-black !important;
+    color: $white-color;
+  }
+
+  .fa-bell,
+  .fa-gear,
+  .sidebar-link, h6,
+  h5,
+  h3,
+  h4 {
+    color: $white-color !important;
+  }
+
+  .side-bar{
+    .active{
+      color: $secondary-color !important;
+    }
+  }
+
+  .parent-link,
+  .child-link {
+    color: $dark-gray !important;
+  }
+
+}

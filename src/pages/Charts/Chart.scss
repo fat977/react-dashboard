@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+.card {
+    .card-header{
+        height: 60px;
+    }
+    .card-body  canvas{
+        height: 278px !important;
+    }
+}
+
+h3{
+    font-family:$primaryFont ;
+    font-weight: bold;
+}
