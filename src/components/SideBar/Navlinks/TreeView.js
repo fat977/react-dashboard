@@ -20,10 +20,10 @@ export const treeData = [
     name: "Elements",
     icon: <FontAwesomeIcon icon={faLaptop} />,
     children: [
-      { id: 14, name:  "Buttons" ,path: "/dashboard/elements/buttons" },
-      { id: 15, name: "Modals & Alerts", path: "/dashboard/elements/modals" },
-      { id: 16, name: "Navbar & Tabs" , path: "/dashboard/elements/navs" }, 
-      { id: 17, name: "General" , path: "/dashboard/elements/general" }, 
+      { id: 14, name:  "Buttons" ,path: "/elements/buttons" },
+      { id: 15, name: "Modals & Alerts", path: "/elements/modals" },
+      { id: 16, name: "Navbar & Tabs" , path: "/elements/navs" }, 
+      { id: 17, name: "General" , path: "/elements/general" }, 
     ],
   },
   {
@@ -31,9 +31,9 @@ export const treeData = [
     name: "Forms",
     icon: <FontAwesomeIcon icon={faFilePen} />,
     children: [
-      { id: 3, name:  "General Elements" ,path: "/dashboard/forms/general" },
-      { id: 4, name: "Advanced Elements", path: "/dashboard/forms/advanced" },
-      { id: 5, name: "Editors" , path: "/dashboard/forms/editors" },
+      { id: 3, name:  "General Elements" ,path: "/forms/general" },
+      { id: 4, name: "Advanced Elements", path: "/forms/advanced" },
+      { id: 5, name: "Editors" , path: "/forms/editors" },
     ],
   },
   {
@@ -41,14 +41,14 @@ export const treeData = [
     name: "Tables",
     icon: <FontAwesomeIcon icon={faTable} />,
     children: [
-      { id: 7, name: "Basic Tables" , path: "/dashboard/tables/basic" },
-      { id: 8, name: "DataTables", path: "/dashboard/tables/datatables" },
+      { id: 7, name: "Basic Tables" , path: "/tables/basic" },
+      { id: 8, name: "DataTables", path: "/tables/datatables" },
     ],
   },
   {
     id: 9,
     name: "Charts",
-    path:"/dashboard/charts",
+    path:"/charts",
     icon: <FontAwesomeIcon icon={faChartSimple} />,
   },
   {
@@ -56,7 +56,7 @@ export const treeData = [
     name: "Pages",
     icon: <FontAwesomeIcon  icon={faFile} />,
     children: [
-      { id: 11, name: "Register & Login" ,path: "/dashboard/pages/register-login"},
+      { id: 11, name: "Register & Login" ,path: "/pages/register-login"},
     ],
   },
 ];

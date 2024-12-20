@@ -1,4 +1,4 @@
-import { HashRouter , Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -30,7 +30,7 @@ const Breadcrumbs = React.lazy(()=> import("./components/Breadcrumbs"));
 function App() {
   return (
     <div className="App">
-      <HashRouter
+      <BrowserRouter basename="/react-dashboard"
         future={{
           v7_relativeSplatPath: true,
           v7_startTransition: true,
@@ -50,32 +50,32 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />}>
               <Route index element={<DashboardIndex />} />
-              <Route path="dashboard/charts" element={<Chart />} />
+              <Route path="/charts" element={<Chart />} />
 
-              <Route path="dashboard/forms/advanced" element={<Advanced />} />
-              <Route path="dashboard/forms/general" element={<General />} />
-              <Route path="dashboard/forms/editors" element={<Editors />} />
+              <Route path="/forms/advanced" element={<Advanced />} />
+              <Route path="/forms/general" element={<General />} />
+              <Route path="/forms/editors" element={<Editors />} />
 
-              <Route path="dashboard/elements/buttons" element={<Buttons />} />
-              <Route path="dashboard/elements/modals" element={<Modals />} />
-              <Route path="dashboard/elements/navs" element={<NavTabs />} />
+              <Route path="/elements/buttons" element={<Buttons />} />
+              <Route path="/elements/modals" element={<Modals />} />
+              <Route path="/elements/navs" element={<NavTabs />} />
               <Route
-                path="dashboard/elements/general"
+                path="/elements/general"
                 element={<GeneralElements />}
               />
 
-              <Route path="dashboard/tables/basic" element={<BasicTable />} />
+              <Route path="/tables/basic" element={<BasicTable />} />
               <Route
-                path="dashboard/tables/datatables"
+                path="/tables/datatables"
                 element={<DataTables />}
               />
 
-              <Route path="dashboard/profile" element={<Profile />} />
+              <Route path="/profile" element={<Profile />} />
             </Route>
-            <Route path="dashboard/pages/register-login" element={<Login />} />
+            <Route path="/pages/register-login" element={<Login />} />
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
