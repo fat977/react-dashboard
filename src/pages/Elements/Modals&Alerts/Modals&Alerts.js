@@ -15,11 +15,12 @@ export default function Modals() {
   ];
   return (
     <PageWrapper title="Modals & Alerts">
-      <div className="p-4 position-relative">
+      <div className="p-lg-4 position-relative">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Modals & Alerts</h3>
           </div>
+        
           {contents.map((content) => (
             <Row className="my-3" key={content.id}>
               <Col className="mt-lg-0 mt-sm-3">

@@ -103,7 +103,6 @@ export default function Dashboard() {
             marginTop: "82px",
             marginLeft: windowSize > "768" && (isOpen ? "265px" : "80px"),
             transition: 'all 0.3s ease',
-            padding: "0 8px",
             zIndex: 2,
             position: "relative",
           }}

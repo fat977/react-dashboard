@@ -46,9 +46,9 @@ export default function Buttons() {
 
   return (
     <PageWrapper title="Buttons">
-      <div className="p-4">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Buttons</h3>
           </div>
           <Row className="g-3 my-3">
@@ -225,11 +225,11 @@ export default function Buttons() {
             <ButtonDiv>
               <h5>Button with icon</h5>
               <div className="d-flex flex-column">
-                <Button variant="primary" className="m-2 p-2 w-25">
+                <Button variant="primary" className="m-2 p-2 w-50">
                   Right Icon
                   <FontAwesomeIcon className="ms-2" icon={faHouse} />
                 </Button>
-                <Button variant="primary" className="m-2 p-2 w-25">
+                <Button variant="primary" className="m-2 p-2 w-50">
                   <FontAwesomeIcon className="me-2" icon={faBell} />
                   Left Icon
                 </Button>

@@ -14,9 +14,9 @@ import GeneralCard from "../../components/CardComponent";
 export default function NavTabs() {
   return (
     <PageWrapper title="Navbar & Tabs">
-      <div className="p-4">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Navbar & Tabs</h3>
           </div>
           <Row className="g-3 my-3">
@@ -61,7 +61,7 @@ export default function NavTabs() {
             <GeneralCard title="Offcanvas on xxl">
               <Navbar expand="xxl" className="bg-body-tertiary mb-3">
                 <Container fluid>
-                  <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+                  <Navbar.Brand href="#">Navbar</Navbar.Brand>
                   <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
                   <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-xxl`}
@@ -110,7 +110,7 @@ export default function NavTabs() {
             <GeneralCard title="Offcanvas on lg">
               <Navbar expand="lg" className="bg-body-tertiary mb-3">
                 <Container fluid>
-                  <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+                  <Navbar.Brand href="#">Navbar</Navbar.Brand>
                   <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
                   <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-lg`}

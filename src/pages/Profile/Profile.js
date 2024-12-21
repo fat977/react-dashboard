@@ -25,9 +25,9 @@ export default function Profile() {
   const handleShowFormModal = () => setShowFormModal(true);
   return (
     <PageWrapper title="Profile">
-      <div className="p-4">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Profile</h3>
           </div>
           <Row className=" my-3">

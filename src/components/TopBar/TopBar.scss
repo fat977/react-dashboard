@@ -4,7 +4,6 @@
 %body-style{
     border: $border;
     border-radius: 5px;
-    right: 0px;
     flex-direction: column;
 }
 
@@ -26,7 +25,9 @@
             }
             .notifications-body {
                 @extend %body-style;
-                width: 300px;
+                width: 50vh;
+                right: -60px;
+                top: 50px;
                 a {
                     @include links;
                     color: $black-color;
@@ -46,7 +47,8 @@
             }
             .settings-body {
                 @extend %body-style;
-                width: 100px;
+                width: 20vh;
+                right: 0px;
                 font-family: $secondaryFont;
                 font-size: $fontSize;
                 .w-100 {

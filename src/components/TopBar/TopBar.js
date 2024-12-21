@@ -87,7 +87,7 @@ export default function TopBar() {
     <>
       <div
         className={
-          " top-bar d-flex align-items-center justify-content-between px-5"
+          " top-bar d-flex align-items-center justify-content-between px-lg-5"
         }
         style={{
           left:
@@ -113,11 +113,12 @@ export default function TopBar() {
           />
 
           <div
-            className="input-group search bg-white position-relative"
+            className="input-group search bg-white position-relative "
             style={{
               borderRadius: "5px",
               width: windowSize < 768 ? "70%" : "100%",
               height: "40px",
+              display : windowSize < 768 ? "none" : ""
             }}
           >
             <input
@@ -201,7 +202,7 @@ export default function TopBar() {
                   <Link>Logout</Link>
                 </div>
                 <div className="w-100 px-3 py-2">
-                  <NavLink to={"/dashboard/profile"}>Profile</NavLink>
+                  <NavLink to={"/profile"}>Profile</NavLink>
                 </div>
               </div>
             )}

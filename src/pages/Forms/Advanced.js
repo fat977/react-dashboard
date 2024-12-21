@@ -40,9 +40,9 @@ export default function Advanced() {
 
   return (
     <PageWrapper title="Advanced Form Elements">
-      <div className="p-4">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Advanced Form</h3>
           </div>
           <Row className=" my-3">

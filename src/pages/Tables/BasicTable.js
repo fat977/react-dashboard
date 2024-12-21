@@ -1,7 +1,6 @@
 import { Col, Container, Row, Table } from "../../components/bootstrapComponent";
 import TableComponent from "../../components/TableComponent";
 import PageWrapper from "../../components/PageWrapper";
-
 export default function BasicTable() {
   const columns = [
     { key: "id", label: "ID" },
@@ -17,23 +16,23 @@ export default function BasicTable() {
   ];
   return (
     <PageWrapper title="Basic Table">
-      <div className="p-4 bg-white">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Basic Tables</h3>
           </div>
           <Row className="gap-3 my-3">
-            <Col className="border p-3 shadow">
+            <Col className="border p-3 shadow bg-white">
               <h4>Simple Table</h4>
               <TableComponent columns={columns} data={data} type="border" />
             </Col>
-            <Col className="border p-3 shadow">
+            <Col className="border p-3 shadow bg-white">
               <h4>Unbordered Table</h4>
               <TableComponent columns={columns} data={data} type="" />
             </Col>
           </Row>
           <Row className="gap-3 my-3">
-            <Col className="border p-3 shadow">
+            <Col className="border p-3 shadow bg-white">
               <h4>Striped Column Table</h4>
               <TableComponent
                 columns={columns}
@@ -41,7 +40,7 @@ export default function BasicTable() {
                 type="table-striped-columns"
               />
             </Col>
-            <Col className="border p-3 shadow">
+            <Col className="border p-3 shadow bg-white">
               <h4>Dark Table</h4>
               <TableComponent
                 columns={columns}
@@ -51,7 +50,7 @@ export default function BasicTable() {
             </Col>
           </Row>
           <Row className="gap-3 my-3">
-            <Col className="border p-3 shadow">
+            <Col className="border p-3 shadow bg-white">
               <h4>Responsive Table</h4>
               <Table responsive="sm">
                 <thead>

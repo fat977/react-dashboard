@@ -63,7 +63,7 @@ export default function Login() {
           <div className="w-100">
             {register ? (
               <Form
-                className={`login sliding-div w-100 p-4 ${
+                className={`login sliding-div w-100 p-lg-4 ${
                   showLog ? "show-login" : ""
                 }`}
               >
@@ -110,7 +110,7 @@ export default function Login() {
               </Form>
             ) : (
               <form
-                className={`register sliding-div w-100  p-4 ${
+                className={`register sliding-div w-100  p-lg-4 ${
                   showReg ? "show-register" : ""
                 }`}
               >

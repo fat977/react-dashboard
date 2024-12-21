@@ -2,7 +2,7 @@ import { Table } from "react-bootstrap";
 
 export default function TableComponent({ columns, data, type }) {
   return (
-    <Table  hover className={`${type}`}>
+    <Table responsive="sm"  hover className={`${type}`}>
       <thead>
         <tr>
           {columns.map((column) => (

@@ -37,6 +37,7 @@ function App() {
         }}
       >
         <div
+          className="d-none d-lg-block my-3"
           style={{
             position: "absolute",
             right: "50px",

@@ -92,9 +92,9 @@ export default function DataTables() {
 
   return (
     <PageWrapper title="DataTable">
-      <div className="p-4">
+      <div className="p-lg-4">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between my-3">
             <h3>DataTables</h3>
           </div>
           <div className="d-flex flex-column flex-sm-row justify-content-between my-3">
