@@ -24,7 +24,7 @@ export default function Modals() {
           {contents.map((content) => (
             <Row className="my-3" key={content.id}>
               <Col className="mt-lg-0 mt-sm-3">
-                <Card className="mt-3">
+                <Card className="mt-lg-3">
                   <Card.Header className="bg-dark text-white py-3">
                    {content.name}
                   </Card.Header>

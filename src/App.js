@@ -3,13 +3,16 @@ import React, { Suspense } from "react";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import DashboardIndex from "./pages/Dashboard/Index/DashboardIndex";
+import Profile from "./pages/Profile/Profile";
+import Login from "./pages/Pages/Register&Login";
+import Chart from "./pages/Charts/Chart";
+import GeneralElements from "./pages/Elements/General/General";
 
 
 
 const Buttons = React.lazy(()=> import("./pages/Elements/Buttons/Button"));
 const Modals = React.lazy(()=> import("./pages/Elements/Modals&Alerts/Modals&Alerts"));
 const NavTabs = React.lazy(()=> import("./pages/Elements/Navbar&Tabs"));
-const GeneralElements = React.lazy(()=> import("./pages/Elements/General/General"));
 
 const General = React.lazy(()=> import("./pages/Forms/General"));
 const Advanced = React.lazy(()=> import("./pages/Forms/Advanced"));
@@ -17,13 +20,6 @@ const Editors = React.lazy(()=> import("./pages/Forms/Editors"));
 
 const BasicTable = React.lazy(()=> import("./pages/Tables/BasicTable"));
 const DataTables = React.lazy(()=> import("./pages/Tables/DataTable"));
-
-const Chart = React.lazy(()=> import("./pages/Charts/Chart"));
-
-const Login = React.lazy(()=> import("./pages/Pages/Register&Login"));
-
-const Profile = React.lazy(()=> import("./pages/Profile/Profile"));
-
 
 const Breadcrumbs = React.lazy(()=> import("./components/Breadcrumbs"));
 

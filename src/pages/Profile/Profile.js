@@ -32,7 +32,7 @@ export default function Profile() {
           </div>
           <Row className=" my-3">
             <Col xs={12} md={12} lg={12} className="mt-lg-0 mt-sm-3">
-              <Card className="mt-3">
+              <Card className="mt-lg-3">
                 <Card.Header className="profile position-relative">
                   <Form>
                     <div className="mb-3 img-preview position-absolute">

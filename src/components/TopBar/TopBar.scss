@@ -25,7 +25,7 @@
             }
             .notifications-body {
                 @extend %body-style;
-                width: 50vh;
+                width: 70vh;
                 right: -60px;
                 top: 50px;
                 a {
@@ -35,8 +35,6 @@
                 hr {
                     margin: 5px 0 !important;
                 }
-                font-family: $secondaryFont;
-                font-size: $fontSize;
             }
         }
         .settings {
@@ -49,8 +47,6 @@
                 @extend %body-style;
                 width: 20vh;
                 right: 0px;
-                font-family: $secondaryFont;
-                font-size: $fontSize;
                 .w-100 {
                     a {
                         @include links;

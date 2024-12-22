@@ -19,7 +19,7 @@ export default function NavTabs() {
           <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Navbar & Tabs</h3>
           </div>
-          <Row className="g-3 my-3">
+          <Row className="g-3 my-lg-3">
             <GeneralCard title="Basic Navbar">
               <Navbar expand="lg" bg="primary" data-bs-theme="dark">
                 <Container>

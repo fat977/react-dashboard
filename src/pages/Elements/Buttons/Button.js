@@ -51,7 +51,7 @@ export default function Buttons() {
           <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Buttons</h3>
           </div>
-          <Row className="g-3 my-3">
+          <Row className="g-3 my-lg-3">
             <ButtonDiv>
               <h5>Basic Buttons</h5>
               <div className="d-flex flex-wrap">

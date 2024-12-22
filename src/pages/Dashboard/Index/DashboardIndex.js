@@ -19,7 +19,7 @@ export default function DashboardIndex() {
           <div className="d-flex align-items-center justify-content-between my-3">
             <h3>Dashboard</h3>
           </div>
-          <Row className="g-3 my-3">
+          <Row className="g-3 my-lg-3">
             {widgets.map((widget, key) => (
               <Col xs={12} md={6} lg={3} key={key}>
                 <div className="widget px-3 py-4 bg-white  rounded-2">

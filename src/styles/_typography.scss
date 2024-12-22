@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Lato:ital,wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+$secondaryFont : "Roboto", sans-serif;
+$primaryFont : 'Merriweather', serif;
+
+
+$font-xsmall : .75rem;
+$font-small: 0.875rem;
+$font-medium: 1rem;
+$font-large: 1.25rem;
+
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  large: 1024px
+);

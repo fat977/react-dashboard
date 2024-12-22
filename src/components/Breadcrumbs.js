@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
     .slice(3)
     .filter((path) => path); // Split path and remove empty segments
 
-    if (location.pathname === '/dashboard/pages/register-login') return null;
+    if (location.pathname === '/pages/register-login') return null;
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">

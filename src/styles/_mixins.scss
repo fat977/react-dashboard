@@ -1,4 +1,11 @@
 @mixin links() {
     text-decoration: none !important;
 }
-  
+
+@mixin responsive-font($small, $large) {
+    font-size: $small !important;
+
+    @media (min-width: map-get($breakpoints, medium)) {
+        font-size: $large !important;
+    }
+}

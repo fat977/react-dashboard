@@ -43,7 +43,7 @@ export default function GeneralElements() {
           <div className="d-flex align-items-center justify-content-between my-3">
             <h3>General Elements</h3>
           </div>
-          <Row className="g-3 my-3">
+          <Row className="g-3 my-lg-3">
             <GeneralCard title="Range">
               <div className="custom-range">
                 <Form.Label>Range:</Form.Label>
