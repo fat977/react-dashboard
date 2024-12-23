@@ -16,7 +16,7 @@ export default function Chart() {
           <h3>ChartJs</h3>
         </div>
         <Row className="my-3">
-          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-sm-3">
+          <Col xs={12} md={12} lg={6} className="mt-lg-0">
             <Card>
               <Card.Header className="bg-primary text-white py-3">Line Chart</Card.Header>
               <Card.Body>
@@ -24,7 +24,7 @@ export default function Chart() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-sm-3">
+          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-3">
             <Card>
               <Card.Header className="bg-primary text-white py-3">Area Chart</Card.Header>
               <Card.Body>
@@ -34,7 +34,7 @@ export default function Chart() {
           </Col>
         </Row>
         <Row className="my-3">
-          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-sm-3">
+          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-3">
             <Card>
               <Card.Header className="bg-warning text-white py-3">Doughnut Chart</Card.Header>
               <Card.Body className="d-flex justify-content-center">
@@ -42,7 +42,7 @@ export default function Chart() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-sm-3">
+          <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-3">
             <Card>
               <Card.Header className="bg-danger text-white py-3">Pie Chart</Card.Header>
               <Card.Body className="d-flex justify-content-center">
@@ -52,7 +52,7 @@ export default function Chart() {
           </Col>
         </Row>
         <Row>
-        <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-sm-3">
+        <Col xs={12} md={12} lg={6} className="mt-lg-0 mt-3">
             <Card>
               <Card.Header className="bg-success text-white py-3">Bar Chart</Card.Header>
               <Card.Body>

@@ -7,9 +7,10 @@ import {
   faSun,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import { Dropdown } from "../bootstrapComponent";
 import { useEffect, useRef, useState } from "react";
 import { faBell, faMessage } from "@fortawesome/free-regular-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMenuContext } from "../../context/MenuContext";
 import { useWindowSizeContext } from "../../context/WindowContext";
 
@@ -36,22 +37,8 @@ export default function TopBar() {
         parent.children.length > 0
     );
 
-  const [isIconVisible, setIconVisible] = useState(false);
-  const [isImageVisible, setImageVisible] = useState(false);
-
-  const toggleIconVisibility = () => {
-    setIconVisible(!isIconVisible);
-    setImageVisible(false);
-  };
-
-  const toggleImageVisibility = () => {
-    setImageVisible(!isImageVisible);
-    setIconVisible(false);
-  };
-
-  const {isOpen , setIsOpen} = useMenuContext();
-  const {windowSize} = useWindowSizeContext();
-
+  const { isOpen, setIsOpen } = useMenuContext();
+  const { windowSize } = useWindowSizeContext();
 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
@@ -78,16 +65,16 @@ export default function TopBar() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
   return (
     <>
       <div
         className={
-          " top-bar d-flex align-items-center justify-content-between px-lg-5"
+          " top-bar d-flex align-items-center justify-content-between px-3 px-lg-5"
         }
         style={{
           left:
@@ -118,7 +105,7 @@ export default function TopBar() {
               borderRadius: "5px",
               width: windowSize < 768 ? "70%" : "100%",
               height: "40px",
-              display : windowSize < 768 ? "none" : ""
+              //display: windowSize < 768 ? "none" : "",
             }}
           >
             <input
@@ -146,66 +133,78 @@ export default function TopBar() {
           />
 
           <div className="position-relative notifications">
-            {/* Font Awesome Icon Button */}
-            <button
-              onClick={toggleIconVisibility}
-              className=" notifications-btn"
-            >
-              <FontAwesomeIcon icon={faBell} size="lg" />
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                4
-              </span>
-            </button>
+            <Dropdown>
+              <Dropdown.Toggle id="dropdown-basic" className="mt-2">
+                <FontAwesomeIcon size="lg" icon={faBell} color="black" />
 
-            {/* Conditional Rendering of the Div */}
-            {isIconVisible && (
-              <div className="position-absolute d-flex bg-white notifications-body">
-                <h6 className="text-center my-2 text-dark">10 Notifications</h6>
-                <hr />
-                <div className="d-flex justify-content-between  px-3 notifications-link">
-                  <Link>
-                    <FontAwesomeIcon icon={faMessage} /> 4 new Messages{" "}
-                  </Link>
-                  <p className="text-secondary">2 minutes ago</p>
-                </div>
-                <hr />
-                <div className="d-flex justify-content-between px-3 notifications-link">
-                  <Link>
-                    <FontAwesomeIcon icon={faUsers} /> 8 new Registers{" "}
-                  </Link>
-                  <p className="text-secondary">2 minutes ago</p>
-                </div>
-                <hr />
-                <div className="d-flex justify-content-between px-3 notifications-link">
-                  <Link>
-                    <FontAwesomeIcon icon={faFile} /> 2 new Reports{" "}
-                  </Link>
-                  <p className="text-secondary">2 minutes ago</p>
-                </div>
-              </div>
-            )}
+                <span className="position-absolute translate-middle badge rounded-pill bg-danger">
+                  3
+                </span>
+              </Dropdown.Toggle>
+
+             
+                <Dropdown.Menu>
+                <h4 className="text-center my-2 text-dark">
+                    10 Notifications
+                  </h4>
+                  <hr />
+                  <Dropdown.Item href="#/action-1">
+                    <div className="d-flex align-items-center justify-content-between px-2">
+                      <div>
+                        <FontAwesomeIcon icon={faUsers} className="me-2" />8
+                        new registers
+                      </div>
+                      <span className="text-muted ms-5">3 mins</span>
+                    </div>
+                  </Dropdown.Item>
+                  <hr />
+                  <Dropdown.Item href="#/action-1">
+                    <div className="d-flex align-items-center justify-content-between px-2">
+                      <div>
+                        <FontAwesomeIcon icon={faMessage} className="me-2" />4
+                        new messages
+                      </div>
+                      <span>3 hours</span>
+                    </div>
+                  </Dropdown.Item>
+                  <hr />
+                  <Dropdown.Item href="#/action-1">
+                    <div className="d-flex align-items-center justify-content-between px-2">
+                      <div>
+                        <FontAwesomeIcon icon={faFile} className="me-2" />2 new
+                        reports
+                      </div>
+                      <span>4 days</span>
+                    </div>
+                  </Dropdown.Item>
+                  <hr />
+                  <Dropdown.Item className="text-center" href="#/action-1">
+                    See all notifications
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
           </div>
-          <div className="position-relative settings">
-            {/* img */}
-            <img
-              src={require(`../../assets/Admin/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png`)}
-              onClick={toggleImageVisibility}
-              width={"50px"}
-              alt="admin-pic"
-              className="profile-img"
-            />
 
-            {/* Conditional Rendering of the Div */}
-            {isImageVisible && (
-              <div className="position-absolute d-flex align-items-center bg-white mt-2 settings-body">
-                <div className="w-100 px-3 py-2">
-                  <Link>Logout</Link>
-                </div>
-                <div className="w-100 px-3 py-2">
-                  <NavLink to={"/profile"}>Profile</NavLink>
-                </div>
-              </div>
-            )}
+          <div className="settings">
+            <Dropdown>
+              <Dropdown.Toggle id="dropdown-basic" className="p-0">
+                <img
+                  src={require(`../../assets/Admin/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png`)}
+                  width={"50px"}
+                  alt="admin-pic"
+                  className="profile-img"
+                />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/profile">
+                  Profile
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/page2">
+                  Logout
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         </div>
       </div>
@@ -213,14 +212,14 @@ export default function TopBar() {
       {isVisible && (
         <div
           ref={divRef}
-          className=" w-25 border bg-light search-result"
+          className=" w-50 border bg-light search-result"
           style={{
-            position:'fixed',
+            position: "fixed",
             left:
               windowSize < "768"
                 ? isOpen
                   ? 0
-                  : 0
+                  : '50px'
                 : isOpen
                 ? "350px"
                 : "175px",
@@ -233,7 +232,7 @@ export default function TopBar() {
             {filteredNavData.length > 0 ? (
               filteredNavData.map((parent) => (
                 <div key={parent.id} className="nav-item p-2">
-                  <a href={parent.path} className="parent-link fw-bold">
+                  <a href={`/react-dashboard${parent.path}`} className="parent-link fw-bold">
                     {parent.name}
                   </a>
 
@@ -241,7 +240,7 @@ export default function TopBar() {
                     <ul className="child-links p-0">
                       {parent.children.map((child) => (
                         <li key={child.id}>
-                          <a href={child.path} className="child-link">
+                          <a href={`/react-dashboard${child.path}`} className="child-link">
                             {child.name}
                           </a>
                         </li>

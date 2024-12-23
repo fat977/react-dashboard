@@ -34,12 +34,12 @@ h1,h2{
   @include responsive-font(2rem, 3rem);
 } 
 
-a,.sidebar-link,button,span{
+a,.sidebar-link,button,span,th{
   @include responsive-font($font-small, $font-medium);
 
 }
 
-h3,h4,.card-header,th,.navbar-brand{
+h3,h4,.card-header,.navbar-brand{
   @include responsive-font($font-medium, $font-large);
 }
 

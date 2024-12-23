@@ -12,7 +12,7 @@
   .widget,
   .calender,
   .todo,
-  .notifications-body,.col {
+  .notifications-body,.dropdown-menu,.col {
     background-color: $black-color !important;
     color: $white-color !important;
   }
@@ -46,7 +46,7 @@
   .carousel,
   .ck,
   .swiper,
-  .search-result,.settings-body,.modal-content,
+  .search-result,.modal-content,
   div[class^="sc"],
   nav[class^="sc"],
   .palette-colors {

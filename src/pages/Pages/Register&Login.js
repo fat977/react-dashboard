@@ -37,7 +37,7 @@ export default function Login() {
           top:'30px'
         }}
         className={`form-card container d-flex  align-items-center ${
-          smallScreen ? "w-75" : "w-50"
+          smallScreen ? "w-100" : "w-50"
         }`}
       >
         {/* form Div */}
@@ -63,11 +63,11 @@ export default function Login() {
           <div className="w-100">
             {register ? (
               <Form
-                className={`login sliding-div w-100 p-lg-4 ${
+                className={`login sliding-div w-100 p-3 p-lg-4 ${
                   showLog ? "show-login" : ""
                 }`}
               >
-                <h3 className="text-start mb-4">Login</h3>
+                <h3 className=" mb-4">Login</h3>
                 <InputGroup className="mb-3">
                   <Form.Control
                     placeholder="Email"
@@ -100,21 +100,21 @@ export default function Login() {
                     display: smallScreen ? "block" : "none",
                   }}
                 >
-                  <span>
-                    Don't have an account ?{" "}
+                 <div className="d-flex gap-2">
+                    <span>Don't have an account ?</span>
                     <NavLink onClick={handleForm}>
                       {register ? "Register" : "Login"}
                     </NavLink>
-                  </span>
+                  </div>
                 </div>
               </Form>
             ) : (
               <form
-                className={`register sliding-div w-100  p-lg-4 ${
+                className={`register sliding-div w-100 p-3 p-lg-4 ${
                   showReg ? "show-register" : ""
                 }`}
               >
-                <h3 className="text-start mb-4">Register</h3>
+                <h3 className=" mb-4">Register</h3>
                 <InputGroup className="mb-3">
                   <Form.Control
                     placeholder="Name"
@@ -172,12 +172,12 @@ export default function Login() {
                     display: smallScreen ? "block" : "none",
                   }}
                 >
-                  <span>
-                    Have already an account ?{" "}
+                  <div className="d-flex gap-2">
+                    <span>Have already an account ?</span>
                     <NavLink onClick={handleForm}>
                       {register ? "Register" : "Login"}
                     </NavLink>
-                  </span>
+                  </div>
                 </div>
               </form>
             )}

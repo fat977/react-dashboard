@@ -70,10 +70,20 @@
 
 
 @media (max-width: 992px) {
-  .form-div {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
-      url('../../assets/form/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg');
-    width: 100% !important;
+
+
+  .form-card{
+    height: 100vh !important;
+    top: 0 !important;
+    .form-div {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
+        url('../../assets/form/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg');
+      width: 100% !important;
+    }
+  
+    h3{
+      text-align: center !important;
+    }
   }
 
 
